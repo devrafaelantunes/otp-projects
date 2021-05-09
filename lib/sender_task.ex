@@ -1,4 +1,4 @@
-defmodule Sender do
+defmodule Sender.Task do
   @emails [
     "rafaelantunes@live.com",
     "antuneslari@hotmail.com",
@@ -16,10 +16,12 @@ defmodule Sender do
 
   def notify_all() do
     Enum.map(@emails, fn email ->
+      # Task.Start
       Task.async(fn ->
         send_email(email)
       end)
     end)
-    |> Enum.map(&Task.await/1) # same as Task.await(task)
+    # same as Task.await(task)
+    |> Enum.map(&Task.await/1)
   end
 end
