@@ -1,4 +1,4 @@
-defmodule OnlinePageProducerConsumer do
+defmodule OnlinePageProducerConsumerOriginal do
   use GenStage
   require Logger
 

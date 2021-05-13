@@ -3,7 +3,8 @@ defmodule PageConsumerSupervisor do
   require Logger
 
   def start_link(_args) do
-    ConsumerSupervisor.start_link(__MODULE__, :ok)
+    #ConsumerSupervisor.start_link(__MODULE__, :ok)
+    ConsumerSupervisor.start_link(__MODULE__, :ok, name: __MODULE__)
   end
 
   def init(:ok) do
