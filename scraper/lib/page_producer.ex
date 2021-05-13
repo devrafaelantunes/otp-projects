@@ -25,6 +25,4 @@ defmodule PageProducer do
   def handle_cast({:pages, pages}, state) do
     {:noreply, pages, state}
   end
-
-
 end
